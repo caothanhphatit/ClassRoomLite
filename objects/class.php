@@ -37,11 +37,12 @@ function getClassByUser($id_user){
     return $stmt;
 }
 
-function addClass ($id_user, $id_name , $role){
-    $query =  "insert into classinfo VALUES ('".HS0002."','".CL0001."',' ".student."')";
-
+function addUserToClass ($id_user, $id_class , $role){
+    $query =  "insert into classinfo VALUES ('".$id_user."','".$id_class."',' ".$role."')";
+}
+function CreateClass ($id_user, $id_class , $role){
+    $query =  "insert into classinfo VALUES ('".$id_user."','".$id_class."',' ".$role."')";
 }
 
 }
-
 ?>

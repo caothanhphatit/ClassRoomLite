@@ -53,7 +53,9 @@ if($num>0){
     http_response_code(200);
  
     // show products data in json format
-    echo json_encode($jwt);
+    echo json_encode(array(
+        "status" => "1",
+        "jwt" => $jwt));
 
 }
 

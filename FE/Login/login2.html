@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Login password</title>
+        <link rel="stylesheet" href="../style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+                <img src="../Images/logo_login.png">
+                <h3>Hi ...</h3>
+                <input type="password" name ="password" placeholder="Enter your password">
+                <button onclick="Login()">Next</button>
+                <a href="">Forgot password</a>
+       
+            
+
+    </body>
+		<script>    
+		function Login(){
+			const url ="http://localhost/ClassRoomLite/API/login/login.php?email=abcdxyssz2l3@gmail.com&password=1234";
+		$.get(url, (data) =>{
+		if(data.status ==1){
+		alert(data.jwt);
+		document.cookie = data.jwt;}
+		else{
+		//hien thi loi dang nhap
+		}
+		});
+		}
+		</script>
+</html>
